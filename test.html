@@ -53,23 +53,6 @@
   display: none;
   text-align: center;
 }
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: '1000';
-  position: relative;
-  margin: auto;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: '1.5';
-  animation-name: fade;
-  animation-duration: '1.5';
-}
-
-
 </style>
 
 <title>Welcome!</title>
@@ -98,13 +81,22 @@
     <span class="dot" onclick="currentSlide(4)"></span>
   </div>
 
-  <script>
+  <script language='CSS'>
+  /* Slideshow container */
+  .slideshow-container {max-width: '1000'; position: relative; margin: auto;}
 
+  /* Fading animation */
+  .fade { -webkit-animation-name: fade; -webkit-animation-duration: '1.5'; animation-name: fade; animation-duration: '1.5';}
+
+  @-webkit-keyframes fade { from {opacity: .4}  to {opacity: 1}}
+
+  @keyframes fade {from {opacity: .4} to {opacity: 1}}
   </script>
 
   <script language = 'JavaScript'>
   var slideIndex = 0;
   showSlides();
+
   function showSlides() {
       var i;
       var slides = document.getElementsByClassName("mySlides");
@@ -118,7 +110,7 @@
       if (slideIndex = 4) {document.body.style.backgroundColor = '#412f0b';}
 
       slides[slideIndex-1].style.display = "block";
-      setTimeout(showSlides, 5000); // Change image every 2 seconds
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
   </script>
 
@@ -153,7 +145,7 @@
 var myVar;
 
 function myFunction() {
-    myVar = setTimeout(showPage, 1000);
+    myVar = setTimeout(showPage, 1700);
 }
 
 function showPage() {
