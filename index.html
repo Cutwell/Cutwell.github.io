@@ -4,45 +4,81 @@
 <head>
 <title>Welcome!</title>
 <link rel="shortcut icon" href="favicon.gif" type="image/x-icon">
+<style> a{text-decoration:none;color: inherit;} </style>
 </head>
 
 <body>
 
-<!-- "Fork Me On Github" ribbon -->
-<div style="text-align: center;"><a href="https://github.com/cutwell"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Check out my GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+<!-- Project banner slide-show -->
+<div class="slideshow-container">
+  <div class="mySlides fade"><a href="https://github.com/cutwell"><img style="width:250" src="Assets/Banners/Cutwellbanner.jpg" alt="Main Banner" border="0"></a></div>
+  <div class="mySlides fade"><a href="https://cutwell.github.io/Projects/discord"><img style="width:100%" src="Assets/Banners/Discord.jpg" alt="Discord Banner" border="0"></a></div>
+  <div class="mySlides fade"><a href="https://cutwell.github.io/Projects/icebox"><img style="width:100%" src="Assets/Banners/IceBanner.jpg" alt="^.^ Icebox Banner" border="0"></a></div>
+  <div class="mySlides fade"><a href="https://cutwell.github.io/Projects/TinyIP"><img style="width:100%" src="Assets/Banners/TinyIPbanner.jpg" alt="tinyIP banner" border="0"></a></div>
+  <div class="mySlides fade"><a href="https://cutwell.github.io/Projects/Aflame"><img style="width:100%" src="Assets/Banners/Aflamebanner.jpg" alt="Aflame banner :)" border="0"></a></div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
 
+<script language='CSS'>
+/* Slideshow container */
+.slideshow-container {max-width: 1000px; position: relative; margin: auto;}
 
-<p>
-<a href="https://github.com/Cutwell">
-<div style="text-align: center;"><img src="Assets/Banners/Cutwellbanner.jpg" alt="If your seeing this, stop using Internet Explorer and get a proper browser!" align="middle" width="" height="" border="0">
-</a>
-</p>
+/* The dots/bullets/indicators */
+.dot {cursor:pointer; height: 13px; width: 13px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;}
 
-<p>
-<a href="https://cutwell.github.io/Projects/icebox">
-<div style="text-align: center;"><img src="Assets/Banners/IceBanner.jpg" alt="^.^ Nothing to see here" align="middle" width="" height="" border="0">
-</a>
+/* Fading animation */
+.fade { -webkit-animation-name: fade; -webkit-animation-duration: 1.5s; animation-name: fade; animation-duration: 1.5s;}
 
+@-webkit-keyframes fade { from {opacity: .4}  to {opacity: 1}}
 
+@keyframes fade {from {opacity: .4} to {opacity: 1}}
+</script>
 
-<a href="https://cutwell.github.io/Projects/Aflame">
-<div style="text-align: center;"><img src="Assets/Banners/Aflamebanner.jpg" alt="If your reading this, hi :)" align="middle" width="" height="" border="0">
-</a>
+<script language = 'JavaScript'>
+var slideIndex = 0;
+showSlides();
 
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {slides[i].style.display = "none"; }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 
 <!--
-Aflame is not currently supported by Trinket. But when it does then this code will work for sure ^.^
-<iframe src="https://trinket.io/embed/python/96196fce3b?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+Social media icons arranged into 3x3 grid
 -->
-
-<a href="https://cutwell.github.io/Projects/TinyIP">
-<div style="text-align: center;"><img src="Assets/Banners/TinyIPbanner.jpg" alt="This is supposed to show an image - what can YOU see?" align="middle" width="" height="" border="0">
-</a>
-
-<a href="https://cutwell.github.io/Projects/discord">
-<div style="text-align: center;"><img src="Assets/Banners/Discord.jpg" alt="If your seeing this, stop using Internet Explorer and get a proper browser!" align="middle" width="" height="" border="0">
-</a>
-</p>
+<div style="width:500; background-color:white; height:500; overflow:auto; text-align: center;">
+  <p>
+	<div style="width: 500; height: 256; text-align: center;">
+	  <a href=""><img src="Assets/Social_icons/blank.jpg" align="middle" width="128" height="128" border="0" alt="whitespace" /></a>
+	  <a href="https://github.com/Cutwell"><img src="Assets/Social_icons/github.jpg" align="middle" width="128" height="128" border="0" alt="github" /></a>
+      <a href="https://www.instagram.com/heres_smithy/"><img src="Assets/Social_icons/instagram.jpg" align="middle" width="128" height="128" border="0" alt="instagram" /></a>
+	</div>
+  </p><p>
+    <div style="width: 500; height: 256; text-align: center;">
+      <a href="https://twitter.com/ctrl_ult"><img src="Assets/Social_icons/twitter.jpg" align="middle" width="128" height="128" border="0" alt="twitter" /></a>
+      <a href="http://stackoverflow.com/users/5267623/cutwell"><img src="Assets/Social_icons/stackoverflow.jpg" align="middle" width="128" height="128" border="0" alt="stackoverflow" /></a>
+      <a href="https://uk.pinterest.com/cutwellsmith/"><img src="Assets/Social_icons/pinterest.jpg" align="middle" width="128" height="128" border="0" alt="pinterest" /></a>
+    </div>
+  </p><p>
+    <div style="width: 500; height: 256; text-align: center;">
+      <a href="https://www.quora.com/profile/Zach-Smith-216"><img src="Assets/Social_icons/quora.jpg" align="middle" width="128" height="128" border="0" alt="quora" /></a>
+      <a href="http://www.stumbleupon.com/stumbler/cutwell"><img src="Assets/Social_icons/stumbleupon.jpg" align="middle" width="128" height="128" border="0" alt="stumbleupon" /></a>
+      <a href=""><img src="Assets/Social_icons/blank.jpg" align="middle" width="128" height="128" border="0" alt="whitespace" /></a>
+     </div>
+  </p>
+</div>
 
 </body>
-</html>
