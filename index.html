@@ -1,165 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!--  animating the loading icon CSS  -->
 <style>
 /* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
+#loader {position: absolute;left: 50%;top: 50%;z-index: 1;width: 150px;height: 150px;margin: -75px 0 0 -75px;border: 16px solid #f3f3f3;border-radius: 50%;border-top: 16px solid #3498db;width: 120px;height: 120px;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
+@-webkit-keyframes spin {0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(360deg); }}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+@keyframes spin {0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}
 
 /* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
+.animate-bottom {position: relative;-webkit-animation-name: animatebottom;-webkit-animation-duration: 1s;animation-name: animatebottom;animation-duration: 1s}
 
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 }
-  to { bottom:0px; opacity:1 }
-}
+@-webkit-keyframes animatebottom {from { bottom:-100px; opacity:0 }to { bottom:0px; opacity:1 }}
 
-@keyframes animatebottom {
-  from{ bottom:-100px; opacity:0 }
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: '1000';
-  position: relative;
-  margin: auto;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: '1.5';
-  animation-name: fade;
-  animation-duration: '1.5';
-}
-
-
+@keyframes animatebottom {from{ bottom:-100px; opacity:0 }to{ bottom:0; opacity:1 }}
 </style>
 
-<title>Welcome!</title>
+<title>Cutwell.io</title>
 <link rel="shortcut icon" href="favicon.gif" type="image/x-icon">
-<style> body{text-decoration:none; background-color: #7289d9;} </style>
+<style> body{text-decoration:none} </style>
+
 
 </head>
+
 <body onload="myFunction()" style="margin:0;">
+
+<!--  dropdown menu CSS  -->
+<style>
+.dropdown {position: relative;display: inline-block;}
+
+.dropdown-content {display: none;position: absolute;min-width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
+
+.dropdown:hover .dropdown-content {display: block;}
+</style>
 
 <div id="loader"></div>
 
+<!--  main website content  -->
 <div style="display:none;" id="myDiv" class="animate-bottom">
 
-  <!-- Project banner slide-show -->
-  <div class="slideshow-container">
-    <div class="mySlides fade"><a href="https://cutwell.github.io/Projects/discord"><img style="width:100%" src="Assets/Banners/Discord.jpg" alt="Discord Banner" border="0"></a></div>
-    <div class="mySlides fade"><a href="https://cutwell.github.io/Projects/icebox"><img style="width:100%" src="Assets/Banners/IceBanner.jpg" alt="^.^ Icebox Banner" border="0"></a></div>
-    <div class="mySlides fade"><a href="https://cutwell.github.io/Projects/scrappy"><img style="width:100%" src="Assets/Banners/Scrappybanner.jpg" alt="Aflame banner :)" border="0"></a></div>
-    <div class="mySlides fade"><a href="https://cutwell.github.io/Projects/hotCoffee"><img style="width:100%" src="Assets/Banners/hotCoffeebanner.jpg" alt="Aflame banner :)" border="0"></a></div>
-  </div>
-  <br>
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
+  <!--  Dropdown menu (displays banners)  -->
+  <div class="dropdown" style="position: fixed; top: 0; left: 0; border: 0;">
+    <img src="Assets/menu.jpg" alt="Dropdown Menu" width="50" height="50">
+    <div class="dropdown-content">
+      <div style="text-align:center"><a href="https://cutwell.github.io/Projects/discord"><img style="width:350%" src="Assets/Banners/Discord.jpg" alt="Discord Banner" border="0"></a></div>
+      <div style="text-align:center"><a href="https://github.com/Cutwell/hotCoffee"><img style="width:350%" src="Assets/Banners/hotCoffeebanner.jpg" alt="Aflame banner :)" border="0"></a></div>
+      <div style="text-align:center"><a href="https://github.com/Cutwell/Icebox"><img style="width:350%" src="Assets/Banners/IceBanner.jpg" alt="^.^ Icebox Banner" border="0"></a></div>
+      <div style="text-align:center"><a href="https://github.com/Cutwell/scrappy"><img style="width:350%" src="Assets/Banners/Scrappybanner.jpg" alt="Aflame banner :)" border="0"></a></div>
+    </div>
   </div>
 
-  <script>
+  <!--  randomly selects and displays a featured project  -->
+  <script type="text/javascript">
+  var image = new Array(4);
+  image[0] = '<style>body{background-color: #7289d9;}</style><div style="text-align:center"><a href="https://cutwell.github.io/Projects/discord"><img style="width:100%" src="Assets/Banners/Discord.jpg" alt="Discord Banner" border="0"></a></div>';
+  image[1] = '<style>body{background-color: #412f0b;}</style><div style="text-align:center"><a href="https://github.com/Cutwell/hotCoffee"><img style="width:100%" src="Assets/Banners/hotCoffeebanner.jpg" alt="Aflame banner :)" border="0"></a></div>';
+  image[2] = '<style>body{background-color: #3cb2cc;}</style><div style="text-align:center"><a href="https://github.com/Cutwell/Icebox"><img style="width:100%" src="Assets/Banners/IceBanner.jpg" alt="^.^ Icebox Banner" border="0"></a></div>';
+  image[3] = '<style>body{background-color: #ffa800;}</style><div style="text-align:center"><a href="https://github.com/Cutwell/scrappy"><img style="width:100%" src="Assets/Banners/Scrappybanner.jpg" alt="Aflame banner :)" border="0"></a></div>';
 
+  index  = Math.floor(Math.random() * image.length);
+  document.write(image[index]);
   </script>
 
-  <script language = 'JavaScript'>
-  var slideIndex = 0;
-  showSlides();
-  function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {slides[i].style.display = "none"; }
-      slideIndex++;
-      if (slideIndex> slides.length) {slideIndex = 1}
-
-      if (slideIndex = 1) {document.body.style.backgroundColor = '#7289d9';}
-      if (slideIndex = 2) {document.body.style.backgroundColor = '#3cb2cc';}
-      if (slideIndex = 3) {document.body.style.backgroundColor = '#ffa800';}
-      if (slideIndex = 4) {document.body.style.backgroundColor = '#412f0b';}
-
-      slides[slideIndex-1].style.display = "block";
-      setTimeout(showSlides, 5000); // Change image every 2 seconds
-  }
-  </script>
-
-  <!--
-  Social media icons arranged into 3x3 grid
-  -->
+  <!--  Social media icons arranged into 3x3 grid  -->
   <div style="width:500; height:500; overflow:auto; text-align: center;">
-    <p>
-  	<div style="width: 500; height: 256; text-align: center;">
-  	  <a href=""><img src="Assets/Social_icons/cyan.jpg" align="middle" width="128" height="128" border="0" alt="whitespace" /></a>
+   	<div style="width: 500; height: 256; text-align: center;">
   	  <a href="https://github.com/Cutwell"><img src="Assets/Social_icons/github.jpg" align="middle" width="128" height="128" border="0" alt="github" /></a>
-        <a href="https://www.instagram.com/heres_smithy/"><img src="Assets/Social_icons/instagram.jpg" align="middle" width="128" height="128" border="0" alt="instagram" /></a>
-  	</div>
-    </p><p>
-      <div style="width: 500; height: 256; text-align: center;">
-        <a href="https://twitter.com/ctrl_ult"><img src="Assets/Social_icons/twitter.jpg" align="middle" width="128" height="128" border="0" alt="twitter" /></a>
-        <a href="http://stackoverflow.com/users/5267623/cutwell"><img src="Assets/Social_icons/stackoverflow.jpg" align="middle" width="128" height="128" border="0" alt="stackoverflow" /></a>
-        <a href="https://uk.pinterest.com/cutwellsmith/"><img src="Assets/Social_icons/pinterest.jpg" align="middle" width="128" height="128" border="0" alt="pinterest" /></a>
+      <a href="https://www.youtube.com/channel/UC2PoYJZgH5BTrvJct5Fzp9Q"><img src="Assets/Social_icons/youtube.jpg" align="middle" width="128" height="128" border="0" alt="youtube" /></a>
+      <a href="https://www.instagram.com/heres_smithy/"><img src="Assets/Social_icons/instagram.jpg" align="middle" width="128" height="128" border="0" alt="instagram" /></a>
+    </div>
+    <div style="width: 500; height: 256; text-align: center;">
+      <a href="https://twitter.com/ctrl_ult"><img src="Assets/Social_icons/twitter.jpg" align="middle" width="128" height="128" border="0" alt="twitter" /></a>
+      <a href="http://stackoverflow.com/users/5267623/cutwell"><img src="Assets/Social_icons/stackoverflow.jpg" align="middle" width="128" height="128" border="0" alt="stackoverflow" /></a>
+      <a href="https://uk.pinterest.com/cutwellsmith/"><img src="Assets/Social_icons/pinterest.jpg" align="middle" width="128" height="128" border="0" alt="pinterest" /></a>
+    </div>
+    <div style="width: 500; height: 256; text-align: center;">
+      <a href="https://www.quora.com/profile/Zach-Smith-216"><img src="Assets/Social_icons/quora.jpg" align="middle" width="128" height="128" border="0" alt="quora" /></a>
+      <a href="http://www.stumbleupon.com/stumbler/cutwell"><img src="Assets/Social_icons/stumbleupon.jpg" align="middle" width="128" height="128" border="0" alt="stumbleupon" /></a>
+      <a href="https://discord.gg/UusjFdV"><img src="Assets/Social_icons/discord.jpg" align="middle" width="128" height="128" border="0" alt="discord" /></a>
       </div>
-    </p><p>
-      <div style="width: 500; height: 256; text-align: center;">
-        <a href="https://www.quora.com/profile/Zach-Smith-216"><img src="Assets/Social_icons/quora.jpg" align="middle" width="128" height="128" border="0" alt="quora" /></a>
-        <a href="http://www.stumbleupon.com/stumbler/cutwell"><img src="Assets/Social_icons/stumbleupon.jpg" align="middle" width="128" height="128" border="0" alt="stumbleupon" /></a>
-        <a href=""><img src="Assets/Social_icons/cyan.jpg" align="middle" width="128" height="128" border="0" alt="whitespace" /></a>
-       </div>
-    </p>
   </div>
-
 </div>
 
+<!--  loading icon animation (so images can load in background
+      to make website loading smoother)  -->
 <script>
 var myVar;
 
 function myFunction() {
-    myVar = setTimeout(showPage, 1000);
+    myVar = setTimeout(showPage, 600);
 }
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
 }
+</script>
+
+<!--  Bootstrap core JavaScript  -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/static/js/morphext.min.js"></script>
+<script>
+$("#rotating").Morphext({
+	animation: "bounceIn",
+	separator: ",",
+	speed: 2000,
+	complete: function () {
+
+	}
+});
 </script>
 
 </body>
