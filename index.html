@@ -28,6 +28,7 @@
  </body>
   
   <script>
+	var navigation
 	var slideIndex = 0;
 	carousel();
 
@@ -40,9 +41,10 @@
 		slideIndex++;
 		if (slideIndex > x.length) {slideIndex = 1} 
 		x[slideIndex-1].style.display = "block"; 
-		setTimeout(carousel, 9000);
+		navigation = setTimeout(carousel, 9000);
 	}
 	function plusDivs(n) {
+	  clearTimeout(navigation);
   	  showDivs(slideIndex += n);
 	}
 	 function showDivs(n) {
