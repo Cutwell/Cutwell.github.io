@@ -56,6 +56,9 @@
    		    x[i].style.display = "none"; 
   		 }
   		 x[slideIndex-1].style.display = "block"; 
+		 if (n < 1) {slideIndex--}
+		 if (n > -1) {slideIndex++}
+		 navigation = setTimeout(carousel, 9000);
 	}
   </script>
 
