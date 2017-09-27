@@ -1,0 +1,52 @@
+body {
+    background-repeat: repeat;
+}
+span {
+    display: inline-block;
+}
+a {
+    font-family: Courier, monospace;
+    font-size: 1em;
+    text-decoration: none;
+}
+a:active {
+    color: inherit;
+}
+.repo-container {
+    background-color: #fffff7;
+    border-width: thin;
+    border-color: #808080;
+    box-shadow: 0.1em 0.1em 0.1em #fffff7;
+    margin: 1em 1em 1em 1em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 0.5em;
+    width: 25em;
+    height: 8em;
+}
+.repo-name {
+    font-family: Verdana, monospace;
+    font-size: 2em;
+}
+.repo-desc {
+    font-family: Courier, monospace;
+    font-size: 1em;
+}
+.repo-link:hover {
+    text-decoration: overline;
+}
+#title {
+    padding-top: 1.1em;
+    font-family: Verdana, monospace;
+    font-size: 3em;
+    text-align: center;
+}
+#title:hover {
+    text-decoration: underline;
+}
+#repository-list {
+    width: 60em;
+}
+#centered-div {
+    margin: 0 auto;
+    width: 60em;
+}
