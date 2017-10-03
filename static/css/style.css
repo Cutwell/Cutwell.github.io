@@ -9,6 +9,11 @@ a {
     font-size: 1em;
     text-decoration: none;
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 .repo-container {
     border-style: none;
     box-shadow: 0.1em 0.1em 0.1em #fffff7;
@@ -78,23 +83,24 @@ a {
     text-align: center;
     left: 0em;
 }
-#repository-list {
-    width: 60em;
-}
 #centered-div {
-    margin: 0 auto;
+    float: right;
     width: 60em;
 }
 #avatar {
     border-style: solid;
     border-color: #fff;
     border-radius: 50%;
-    position: fixed;
     height: 10em;
     width: 10em;
-    top: 0;
-    right: 0;
 }
-#header-bar {
-    width: 50em;
+#user-stats {
+    width: 6em;
+    height: 1em;
+    padding: 1em;
+    margin: 1em;
+    letter-spacing: 0.1em;
+}
+#repository-list {
+    width: 60em;
 }
