@@ -9,18 +9,6 @@ a {
     font-size: 1em;
     text-decoration: none;
 }
-header{
-    border-style: none;
-    box-shadow: 0.1em 0.1em 0.1em #fffff7;
-    margin: 1em 1em 1em 1em;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    border-radius: 0.5em;
-    width: 25em;
-    height: 10em;
-    background-color: #fff;
-    text-align: left;
-    margin: 0 auto;
-}
 .repo-container {
     border-style: none;
     box-shadow: 0.1em 0.1em 0.1em #fffff7;
@@ -98,11 +86,14 @@ header{
     width: 60em;
 }
 #avatar {
-    position: absolute;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 50%;
+    position: fixed;
     height: 10em;
     width: 10em;
-    left: 56em;
-    top: 1em;
+    top: 0;
+    right: 0;
 }
 #header-bar {
     width: 50em;
