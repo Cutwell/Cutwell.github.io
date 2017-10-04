@@ -1,0 +1,60 @@
+.Python-tag, .HTML-tag, .CSS-tag, .JavaScript-tag, .null-tag, .C-tag, .C\#-tag, .Go-tag, .C\+\+-tag, .Java-tag, .PHP-tag, .Rust-tag, .Swift-tag, .Groovy-tag, .Shell-tag, .PowerShell-tag, .TypeScript-tag {
+    width: 100%;
+    height: 1.7em;
+    background: transparent;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Python-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #ffde57 60%, #4584b6 40%);
+}
+.HTML-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #fc795b 60%, #da5131 40%);
+}
+.CSS-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #5ac1fb 60%, #309ed9 40%);
+}
+.JavaScript-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #fdcc4c 60%, #d9a631 40%);
+}
+.null-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #D3D3D3 60%, #A9A9A9 40%);
+    z-index: -1;
+}
+.C-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #eb4c8d 60%, #9c004c 40%);
+}
+.C\#-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #9b4f96 60%, #813787 40%);
+}
+.Go-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #8dc5e7 60%, #4189bd 40%);
+}
+.C\+\+-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #5c8dbc 60%, #1b598e 40%);
+}
+.Java-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #f8981d 60%, #5382a1 40%);
+}
+.PHP-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #3765af 60%, #295194 40%);
+}
+.Rust-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #875134 60%, #564941 40%);
+}
+.Swift-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #fb7b3e 60%, #f35305 40%);
+}
+.Groovy-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #6398aa 60%, #497f91 40%);
+}
+.Shell-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #3cb24a 60%, #2a3539 40%);
+}
+.PowerShell-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #2570c1 60%, #1c5491 40%);
+}
+.TypeScript-tag {
+    background-image: linear-gradient(118deg, transparent 10%, transparent 10%, #66a3cc 60%, #007acc 40%);
+}
