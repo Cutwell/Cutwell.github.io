@@ -1,5 +1,6 @@
+var name = window.location.href.split(".")[0];
 $.ajax({
-    url: "https://api.github.com/users/Cutwell/repos",
+    url: "https://api.github.com/users/"+name+"/repos",
     jsonp: true,
     method: "GET",
     dataType: "json",
