@@ -1,4 +1,4 @@
-var name = window.location.href.split(".")[0];
+var name = window.location.href.split(".").split("//")[1];
 $.ajax({
     url: "https://api.github.com/users/"+name,
     jsonp: true,
