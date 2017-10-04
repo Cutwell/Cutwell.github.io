@@ -13,4 +13,5 @@ var url = window.location.href.split(".")[0];
 var url = "__YOUR_USER_NAME__";
 ```
 Where __YOUR_USER_NAME__ is your GitHub user name.
+
 4. Repeat for user.js
